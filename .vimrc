@@ -45,15 +45,8 @@ filetype on
 filetype plugin on
 filetype indent on
 
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-
+set tw=85
+imap ;; <Esc>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -66,3 +59,12 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_matlab_checkers = "mlint"
 let g:syntastic_matlab_mlint_exec = "/usr/local/MATLAB/R2016a/bin/glnxa64/mlint"
+
+nmap à @
+nmap ç @@
+let mapleader = ","
+
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+let maplocalleader=","
+set tabstop=2
+set shiftwidth=2
