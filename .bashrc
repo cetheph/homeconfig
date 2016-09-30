@@ -128,7 +128,12 @@ if ! shopt -oq posix; then
 fi
 
 alias getIp="ifconfig | grep -a1 eth0 | grep inet | cut -d ':' -f2 | cut -d ' ' -f1"
-ssh-agent -s
+
+eval `ssh-agent -s`
+ssh-add
 ssh-add ~/.ssh/id_rsa_github
+
 alias tmux="tmux -2"
 alias matlabquick="matlab -nodesktop"
+alias jabref="java -jar /usr/share/jabref/JabRef_3.6.jar"
+

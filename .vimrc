@@ -48,14 +48,9 @@ filetype on
 filetype plugin on
 filetype indent on
 
-"map <up> <nop>
-"map <down> <nop>
-"map <left> <nop>
-"map <right> <nop>
-"imap <up> <nop>
-"imap <down> <nop>
-"imap <left> <nop>
-"imap <right> <nop>
+
+set tw=85
+imap ;; <Esc>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -80,3 +75,12 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 "let g:vimtex_latexmk_continuous=0
 "let g:vimtex_latexmk_background=1
 "let g:vimtex_quickfix_autojump=1
+
+nmap à @
+nmap ç @@
+let mapleader = ","
+
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+let maplocalleader=","
+set tabstop=2
+set shiftwidth=2
