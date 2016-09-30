@@ -14,7 +14,7 @@ set title " Met a jour le titre de votre fenetre ou de
 " votre terminal
 set number " Affiche le numero des lignes
 set ruler " Affiche la position actuelle du curseur
-set wrap " Affiche les lignes trop longues sur plusieurs
+"set wrap " Affiche les lignes trop longues sur plusieurs
 " lignes
 set scrolloff=3 " Affiche un minimum de 3 lignes autour du curseur
 " (pour le scroll)
@@ -40,13 +40,18 @@ colorscheme lucius
 LuciusLight
 "let s:style=white
 syntax enable
+set tw=85
+set shiftwidth=2
+set tabstop=2
 
 filetype on
 filetype plugin on
 filetype indent on
 
+
 set tw=85
 imap ;; <Esc>
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -59,6 +64,17 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_matlab_checkers = "mlint"
 let g:syntastic_matlab_mlint_exec = "/usr/local/MATLAB/R2016a/bin/glnxa64/mlint"
+let g:syntastic_mode_map = {"mode" : "passive"}
+
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+"let g:Tex_Folding=0
+"let g:Tex_DefaultTargetFormat="pdf"
+
+
+"let g:vimtex_latexmk_continuous=0
+"let g:vimtex_latexmk_background=1
+"let g:vimtex_quickfix_autojump=1
 
 nmap à @
 nmap ç @@
